@@ -1,6 +1,6 @@
 class FishTableRow extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       showDescription: false
     };
@@ -19,6 +19,20 @@ class FishTableRow extends React.Component {
     )
   }
 }
+var FishTable = (props) => (
+  <table>
+    
+this.props.items.map(item)=>
+<FishTableRow item={item}/>
+    
+  </table>
+);
+
+ReactDOM.render(
+  <FishTable fishes={fishData}/>,
+  document.getElementById('app')
+);
+/////////////
 
 // PropTypes tell other developers what `props` a component expects
 // Warnings will be shown in the console when the defined rules are violated
