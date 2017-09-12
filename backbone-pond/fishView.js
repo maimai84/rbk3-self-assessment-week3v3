@@ -19,8 +19,9 @@ var FishView = Backbone.View.extend({
   },
 
   events: {
-    'click': function() {
+    click: function() {
       this.model.toggleDescription();
+      
     }
   }
 });

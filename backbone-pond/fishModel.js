@@ -8,10 +8,18 @@ var Fish = Backbone.Model.extend({
     description: 'Regular old fish',
     displayInfo: false
   },
+    
+  
+
+  
   toggleDescription:function(){
-  	this.Model.on('click',function(){this.set(!this.get('displayInfo'))}
-  		,this)
-  	this.render();
-  }
+  	  this.set('displayInfo',!this.get('displayInfo'));
+this.trigger('toggle:description', this.render, this);
+      
+     }
+
+  
+    // your code here
+  
 
 });
